@@ -1,0 +1,15 @@
+--- origsrc/sugar-toolkit-0.96.3/src/sugar/Makefile.am	2012-05-16 04:10:27.000000000 -0500
++++ src/sugar-toolkit-0.96.3/src/sugar/Makefile.am	2012-07-31 20:18:45.261554500 -0500
+@@ -67,9 +67,9 @@ _sugarext.c: _sugarext.defs _sugarext.ov
+ 	    --register $(PYGTK_DEFSDIR)/gdk-types.defs \
+ 	    --register $(PYGTK_DEFSDIR)/gtk-types.defs \
+ 	    --override $*.override \
+-	    --prefix py$* $*.defs) > gen-$*.c \
+-	&& cp gen-$*.c $*.c \
+-	&& rm -f gen-$*.c
++	    --prefix py$(*F) $(*F).defs) > gen-$(*F).c \
++	&& cp gen-$(*F).c $(*F).c \
++	&& rm -f gen-$(*F).c
+ 
+ sugar-marshal.c: sugar-marshal.list
+ 	$(GLIB_GENMARSHAL) --prefix=sugar_marshal \
