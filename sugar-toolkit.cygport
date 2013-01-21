@@ -1,5 +1,8 @@
 inherit pygtk
 
+NAME="sugar-toolkit"
+VERSION=0.98.0
+RELEASE=1
 CATEGORY="Sugar"
 SUMMARY="Sugar Desktop toolkit for GTK2"
 DESCRIPTION="The award-winning Sugar Learning Platform promotes
@@ -12,5 +15,3 @@ SRC_URI="http://download.sugarlabs.org/sources/sucrose/glucose/${PN}/${P}.tar.bz
 
 PATCH_URI="0.96.3-gstreamer.patch
            0.96.3-vpath.patch"
-
-KEEP_LA_FILES="none"
